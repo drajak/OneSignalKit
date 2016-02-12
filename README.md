@@ -84,5 +84,11 @@ import OneSignalKit
 
 ## Additional Information
 
+For bridgin information and more please read the documentation below.
+
 - See http://documentation.onesignal.com/v2.0/docs/using-onesignal-in-your-ios-app for documentation.
 - See http://documentation.onesignal.com/v2.0/docs/ios-sdk-api for OneSignal API documentation.
+
+## License
+OneSingalKit is released under the MIT license. See LICENSE for details.
+
