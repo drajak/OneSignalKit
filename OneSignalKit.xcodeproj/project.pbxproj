@@ -12,8 +12,7 @@
 		B169B5671C6DB7C30055DF8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B169B5651C6DB7C30055DF8B /* Main.storyboard */; };
 		B169B5691C6DB7C30055DF8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B169B5681C6DB7C30055DF8B /* Assets.xcassets */; };
 		B169B56C1C6DB7C30055DF8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B169B56A1C6DB7C30055DF8B /* LaunchScreen.storyboard */; };
-		B169B5771C6DB8320055DF8B /* OneSignalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DBA2741C6DA1C1004E479C /* OneSignalKit.framework */; };
-		B169B5781C6DB8320055DF8B /* OneSignalKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1DBA2741C6DA1C1004E479C /* OneSignalKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B169B57C1C6DBBD90055DF8B /* OneSignalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DBA2741C6DA1C1004E479C /* OneSignalKit.framework */; };
 		B1D1ADE91C6DA5D000ECE01B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B1D1ADE81C6DA5D000ECE01B /* .gitignore */; };
 		B1DBA2781C6DA1C1004E479C /* OneSignalKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DBA2771C6DA1C1004E479C /* OneSignalKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1DBA28D1C6DA1D8004E479C /* OneSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DBA27F1C6DA1D8004E479C /* OneSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,30 +31,6 @@
 		B1DBA29A1C6DA1D8004E479C /* OneSignalTrackIAP.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DBA28C1C6DA1D8004E479C /* OneSignalTrackIAP.m */; };
 		B1DBA29B1C6DA37E004E479C /* OneSignal.m in Headers */ = {isa = PBXBuildFile; fileRef = B1DBA2801C6DA1D8004E479C /* OneSignal.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B169B5791C6DB8320055DF8B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1DBA26B1C6DA1C1004E479C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1DBA2731C6DA1C1004E479C;
-			remoteInfo = OneSignalKit;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		B169B57B1C6DB8320055DF8B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B169B5781C6DB8320055DF8B /* OneSignalKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B169B55F1C6DB7C30055DF8B /* OneSignalKit Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OneSignalKit Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B169B5771C6DB8320055DF8B /* OneSignalKit.framework in Frameworks */,
+				B169B57C1C6DBBD90055DF8B /* OneSignalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,12 +164,11 @@
 				B169B55B1C6DB7C30055DF8B /* Sources */,
 				B169B55C1C6DB7C30055DF8B /* Frameworks */,
 				B169B55D1C6DB7C30055DF8B /* Resources */,
-				B169B57B1C6DB8320055DF8B /* Embed Frameworks */,
+				B169B57E1C6DBC640055DF8B /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B169B57A1C6DB8320055DF8B /* PBXTargetDependency */,
 			);
 			name = "OneSignalKit Demo";
 			productName = "OneSignalKit Demo";
@@ -277,6 +251,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B169B57E1C6DBC640055DF8B /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/OneSignalKit.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B169B55B1C6DB7C30055DF8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -301,14 +293,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B169B57A1C6DB8320055DF8B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1DBA2731C6DA1C1004E479C /* OneSignalKit */;
-			targetProxy = B169B5791C6DB8320055DF8B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B169B5651C6DB7C30055DF8B /* Main.storyboard */ = {
