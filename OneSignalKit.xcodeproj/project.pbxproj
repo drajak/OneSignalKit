@@ -164,7 +164,6 @@
 				B169B55B1C6DB7C30055DF8B /* Sources */,
 				B169B55C1C6DB7C30055DF8B /* Frameworks */,
 				B169B55D1C6DB7C30055DF8B /* Resources */,
-				B169B57E1C6DBC640055DF8B /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -250,24 +249,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B169B57E1C6DBC640055DF8B /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/OneSignalKit.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B169B55B1C6DB7C30055DF8B /* Sources */ = {
@@ -471,6 +452,7 @@
 				B169B56F1C6DB7C30055DF8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1DBA26E1C6DA1C1004E479C /* Build configuration list for PBXProject "OneSignalKit" */ = {
 			isa = XCConfigurationList;
