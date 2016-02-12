@@ -22,7 +22,7 @@ $ brew install carthage
 To integrate OneSignalKit into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "drajak/OneSignalKit" ~> 1.0
+github "drajak/OneSignalKit" ~> 2.0
 ```
 
 Run `carthage update` to build the framework and drag the built `OneSignalKit.framework` into your Xcode project.
