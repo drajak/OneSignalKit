@@ -29,7 +29,7 @@ Run `carthage update` to build the framework and drag the built `OneSinnalKit.fr
 
 ### Manually
 
-If you prefer not to use either of the aforementioned dependency managers, you can integrate Alamofire into your project manually.
+If you prefer not to use either of the aforementioned dependency managers, you can integrate OneSignalKit into your project manually.
 
 #### Embedded Framework
 
@@ -66,6 +66,15 @@ $ git submodule add https://github.com/drajak/OneSignalKit.git
 > The `OneSignalKit.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
 ---
+## Usage 
+### Making a Request
+
+```swift
+import OneSignalKit
+
+        let oneSignal = OneSignal(launchOptions: launchOptions, appId: "#YOUR_APP_ID", handleNotification: nil)
+        oneSignal.enableInAppAlertNotification(true)
+```
 
 ## Additional Information
 
