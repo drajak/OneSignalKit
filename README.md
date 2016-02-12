@@ -67,13 +67,19 @@ $ git submodule add https://github.com/drajak/OneSignalKit.git
 
 ---
 ## Usage 
-### Making a Request
+### Setup
 
+In AppDelegate
 ```swift
 import OneSignalKit
-
-        let oneSignal = OneSignal(launchOptions: launchOptions, appId: "#YOUR_APP_ID", handleNotification: nil)
+```
+```
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Override point for customization after application launch.
+        let oneSignal = OneSignal(launchOptions: launchOptions, appId: "#YOUR_APP_ID_HERE", handleNotification: nil)
         oneSignal.enableInAppAlertNotification(true)
+        return true
+    }
 ```
 
 ## Additional Information
